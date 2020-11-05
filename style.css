@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+
+body {
+  background:#111;
+  color:#fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  height:100vh;
+/*  width is a block element, no need to set width here  */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container p {
+  font-size:3rem;
+  text-align:center; 
+/*  still center horizontally if the text are too long  */
+  /* overflow: hidden;
+  /* prevent scrollbar coming when shrinking and text on the edge */
+  /* padding: 0.5rem; */
+}
+
+.typed-text {
+  /* font-weight:normal; */
+  color: #7FDBFF;
+}
+
+.cursor {
+  display:inline-block;
+  width:3px;
+  background-color: #ccc;
+  margin-left:0.1rem;
+  animation: blink 1s infinite;
+}
+
+.cursor.typing {
+  animation:none;
+}
+
+@keyframes blink {
+  0% {background: #ccc;}
+  49% {background: #ccc;}
+  50% {background: transparent;}
+  99% {background: transparent;}
+  100% {background: #ccc;}
+}
